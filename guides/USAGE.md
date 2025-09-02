@@ -2,78 +2,79 @@
 
 ## 📁 Where Scaffolded Documents Are Created
 
-### Default Behavior
-When you run scaffolding commands, documents are created in your **current working directory**:
+### Organized Project Structure
+When you run scaffolding commands from the scaffolding repository, documents are created in a `projects/[project-name]/` folder:
 
 ```bash
-# Example: You're in /Users/you/Projects/my-new-app
-cd /Users/you/Projects/my-new-app
-/scaffold-all "MyApp" "web"
+# You're in the scaffolding repo
+cd ~/Projekter/scaffolding
+/scaffold-all "my-app" "web"
 
 # Creates:
-/Users/you/Projects/my-new-app/
-├── docs/
-│   ├── PRD.md
-│   ├── ARCHITECTURE.md
-│   ├── RULES.md
-│   ├── TASKS.md
-│   ├── BEST-PRACTICES.md
-│   ├── PATTERNS.md
-│   ├── ANTI-PATTERNS.md
-│   ├── CLAUDE.md
-│   ├── GIT-STRATEGY.md
-│   └── EVALS_AND_TESTING.md
-├── .claude/
-│   ├── agents/
-│   │   └── [project-specific-agents]
-│   └── commands/
-│       └── [project-specific-commands]
-└── README.md
+~/Projekter/scaffolding/
+├── guides/           # Your guide library (unchanged)
+├── .claude/          # Your agents & commands (unchanged)
+├── projects/         # All your scaffolded projects
+│   └── my-app/       # Your new project
+│       ├── docs/
+│       │   ├── PRD.md
+│       │   ├── ARCHITECTURE.md
+│       │   ├── RULES.md
+│       │   ├── TASKS.md
+│       │   ├── BEST-PRACTICES.md
+│       │   ├── PATTERNS.md
+│       │   ├── ANTI-PATTERNS.md
+│       │   ├── CLAUDE.md
+│       │   ├── GIT-STRATEGY.md
+│       │   └── EVALS_AND_TESTING.md
+│       ├── .claude/
+│       │   ├── agents/
+│       │   └── commands/
+│       └── README.md
 ```
 
 ## 🎯 Recommended Workflow
 
-### Option 1: Start Fresh Project
+### Option 1: Create New Project
 ```bash
-# 1. Create new project directory
-mkdir ~/Projects/my-awesome-project
-cd ~/Projects/my-awesome-project
+# 1. Stay in scaffolding repo
+cd ~/Projekter/scaffolding
 
-# 2. Initialize with scaffolding
-/scaffold-all "MyAwesomeProject" "web"
+# 2. Create new project with scaffolding
+/scaffold-all "my-awesome-app" "web"
 
-# 3. Documents are created in the new project directory
-ls -la
+# 3. Your project is created in projects/my-awesome-app/
+ls projects/my-awesome-app/
 # Shows: docs/ .claude/ README.md
+
+# 4. Move to your development workspace when ready
+cp -r projects/my-awesome-app ~/Projects/
+cd ~/Projects/my-awesome-app
 ```
 
-### Option 2: Add to Existing Project
+### Option 2: Add Documents to Existing Project
 ```bash
-# 1. Navigate to existing project
-cd ~/Projects/existing-project
+# 1. From scaffolding repo, create project folder
+cd ~/Projekter/scaffolding
+/scaffold-prd "existing-app" "web"
 
-# 2. Run specific scaffolding commands
-/scaffold-prd "web"
-/scaffold-architecture "node typescript react"
-/scaffold-tasks
-
-# 3. Documents are added to your project
-ls docs/
-# Shows newly created documents
+# 2. Copy specific documents to your existing project
+cp projects/existing-app/docs/PRD.md ~/Projects/existing-app/docs/
 ```
 
-### Option 3: Create in Specific Location
+### Option 3: Manage Multiple Projects
 ```bash
-# 1. Create a dedicated docs workspace
-mkdir ~/Documents/ProjectPlanning/NewProduct
-cd ~/Documents/ProjectPlanning/NewProduct
+# Stay in scaffolding repo for all projects
+cd ~/Projekter/scaffolding
 
-# 2. Scaffold planning documents
-/scaffold-prd "saas"
-/scaffold-tasks
+# Create multiple projects
+/scaffold-all "frontend-app" "react"
+/scaffold-all "backend-api" "node"
+/scaffold-all "mobile-app" "react-native"
 
-# 3. Later, copy to actual project
-cp -r docs/ ~/Projects/actual-project/
+# All organized in projects/
+ls projects/
+# frontend-app/  backend-api/  mobile-app/
 ```
 
 ## 📂 Directory Structure Created

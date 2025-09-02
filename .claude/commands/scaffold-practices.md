@@ -1,15 +1,17 @@
 ---
 description: Generate tech-stack specific best practices
-argument-hint: [language] [framework]
+argument-hint: [project-name] [language] [framework]
 ---
 
 # Scaffold Best Practices for Your Stack
 
-Generate BEST-PRACTICES.md tailored to your technology choices.
+Generate BEST-PRACTICES.md in `projects/$1/docs/`
 
 ## Stack Information
 
-Your stack: $1 with $2 framework
+**Project Name:** $1
+**Language:** $2
+**Framework:** $3
 
 ## Best Practices Generation
 

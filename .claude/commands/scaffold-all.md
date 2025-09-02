@@ -9,11 +9,10 @@ Generate all essential documents for a new project in the correct order.
 
 ## Project Setup Wizard
 
-I'll help you create a complete project foundation. First, tell me:
+I'll create a complete project foundation in `projects/$1/`
 
-1. **Project basics:**
-   - Name: $1
-   - Type: $2 (web app, API, library, CLI tool, etc.)
+**Project Name:** $1 (creates: projects/$1/)
+**Project Type:** $2 (web app, API, library, CLI tool, etc.)
    - Primary language/framework
    - Target users
 

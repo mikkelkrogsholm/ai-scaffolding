@@ -46,16 +46,26 @@ flowchart TD
 
 ## 📁 Where Documents Land
 
-**Important:** Scaffolded documents are created in your **current working directory**. 
+**Important:** Scaffolded documents are created in `projects/[project-name]/` within the scaffolding repository.
 
 ```bash
-# Navigate to your project first!
-cd ~/Projects/my-new-project
-/scaffold-all "MyProject" "web"
-# Creates: ./docs/, ./.claude/, ./README.md
+# From the scaffolding repo:
+cd ~/Projekter/scaffolding
+/scaffold-all "my-app" "web"
+# Creates: projects/my-app/docs/, projects/my-app/.claude/, etc.
+
+# Your scaffolding repo structure:
+scaffolding/
+├── guides/          # Template library
+├── .claude/         # Agents & commands
+├── projects/        # YOUR PROJECTS HERE
+│   ├── my-app/      # Created by scaffolding
+│   ├── another-app/ # Another project
+│   └── ...          # All your scaffolded projects
+└── README.md
 ```
 
-See [USAGE.md](guides/USAGE.md) for detailed information about document placement and directory structures.
+This keeps your scaffolding templates separate from your actual projects, and organizes all scaffolded projects in one place. See [USAGE.md](guides/USAGE.md) for detailed workflows.
 
 ## 📚 Comprehensive Guide Library
 
@@ -411,20 +421,19 @@ You get consistent, high-quality project foundations that enable teams to work i
 ## Quick Command Reference
 
 ```bash
-# Start a new project
-/scaffold-all "MyProject" "web"
+# Start a new project (creates projects/my-app/)
+/scaffold-all "my-app" "web"
 
-# Break down requirements
-/scaffold-tasks
+# Create individual documents for a project
+/scaffold-prd "my-app" "saas"
+/scaffold-architecture "my-app" "node typescript"
+/scaffold-tasks "my-app"
+/scaffold-practices "my-app" "typescript" "react"
 
-# Find parallel opportunities
-/analyze-parallelism
-
-# Check code quality
-/detect-antipatterns
-
-# Validate documentation
-/validate-docs
+# Analysis commands (run on existing projects)
+/analyze-parallelism    # Analyzes projects/[name]/docs/TASKS.md
+/detect-antipatterns    # Scans projects/[name]/ for issues
+/validate-docs          # Validates projects/[name]/docs/
 ```
 
 ---

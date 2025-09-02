@@ -1,11 +1,14 @@
 ---
 description: Generate ARCHITECTURE.md for your project
-argument-hint: [tech-stack]
+argument-hint: [project-name] [tech-stack]
 ---
 
 # Scaffold Architecture Document
 
-Generate a comprehensive ARCHITECTURE.md based on your technology stack.
+Generate ARCHITECTURE.md in `projects/$1/docs/ARCHITECTURE.md`
+
+**Project Name:** $1
+**Tech Stack:** $2
 
 ## Stack Information
 

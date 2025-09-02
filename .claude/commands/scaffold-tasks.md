@@ -1,11 +1,13 @@
 ---
 description: Generate TASKS.md from PRD requirements
-argument-hint: [prd-section-id]
+argument-hint: [project-name]
 ---
 
 # Generate TASKS.md from PRD
 
-Analyze the PRD.md file and create a comprehensive TASKS.md with parallel work streams.
+Analyze the PRD in `projects/$1/docs/PRD.md` and create TASKS.md with parallel work streams.
+
+**Project Name:** $1
 
 ## Instructions
 

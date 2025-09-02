@@ -1,11 +1,14 @@
 ---
 description: Generate a comprehensive PRD for your project
-argument-hint: [project-type]
+argument-hint: [project-name] [project-type]
 ---
 
 # Scaffold Product Requirements Document
 
-Generate a complete PRD based on project type and requirements.
+Generate a complete PRD in `projects/$1/docs/PRD.md`
+
+**Project Name:** $1
+**Project Type:** $2
 
 ## Project Context
 

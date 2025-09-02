@@ -1,0 +1,26 @@
+# Ignore scaffolded projects (they should have their own git repos)
+projects/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (if any future additions)
+node_modules/
+venv/
+__pycache__/
