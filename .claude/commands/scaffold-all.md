@@ -37,6 +37,25 @@ In the optimal order:
 9. **GIT-STRATEGY.md** - Version control workflow
 10. **EVALS_AND_TESTING.md** - Testing and evaluation strategy
 
+## Project-Specific Tools
+
+Based on project type ($2), I'll also create:
+
+### For Web/API Projects
+- **Agents**: frontend-developer, api-designer, database-architect
+- **Commands**: /create-component, /add-api-endpoint, /optimize-bundle
+- **Output Style**: Code generation preferences and standards
+
+### For Writing Projects  
+- **Agents**: editor, outline-developer, consistency-checker
+- **Commands**: /add-chapter, /check-consistency, /word-count
+- **Output Style**: Writing tone, style, and formatting preferences
+
+### For Research Projects
+- **Agents**: hypothesis-tester, literature-reviewer, data-validator
+- **Commands**: /add-hypothesis, /analyze-data, /generate-figures
+- **Output Style**: Academic writing and analysis preferences
+
 ## Cross-Document Validation
 
 After generation, I'll:

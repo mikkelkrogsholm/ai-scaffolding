@@ -65,7 +65,14 @@ scaffolding/
 └── README.md
 ```
 
-This keeps your scaffolding templates separate from your actual projects, and organizes all scaffolded projects in one place. See [USAGE.md](guides/USAGE.md) for detailed workflows.
+This keeps your scaffolding templates separate from your actual projects, and organizes all scaffolded projects in one place. 
+
+**Each project also gets:**
+- 🤖 **Project-specific agents** (e.g., frontend-developer for web, editor for writing)
+- ⚡ **Custom slash commands** (e.g., /create-component, /add-chapter)
+- 🎨 **Output style configuration** tailored to the project type
+
+See [USAGE.md](guides/USAGE.md) for detailed workflows.
 
 ## 📚 Comprehensive Guide Library
 

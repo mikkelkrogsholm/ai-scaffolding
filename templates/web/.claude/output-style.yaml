@@ -1,0 +1,169 @@
+# Output Style Configuration for Web Projects
+
+project_type: web
+framework: detect_from_package_json
+
+# Code Generation Style
+code_style:
+  verbosity: balanced  # minimal | balanced | detailed
+  comments:
+    frequency: moderate  # none | minimal | moderate | extensive
+    style: jsdoc  # inline | jsdoc | tsdoc
+    include_examples: true
+  
+  naming:
+    components: PascalCase
+    functions: camelCase
+    constants: SCREAMING_SNAKE_CASE
+    files: kebab-case
+    css_classes: kebab-case
+    
+  formatting:
+    indent: 2
+    quotes: single
+    semicolons: true
+    trailing_comma: es5
+    line_length: 100
+
+# Explanation Style
+explanation:
+  level: balanced  # brief | balanced | detailed
+  include_reasoning: true
+  include_alternatives: false
+  include_performance_notes: true
+  include_security_notes: true
+
+# Component Generation
+components:
+  structure:
+    separate_styles: true  # Separate .styles.ts files
+    separate_types: true   # Separate .types.ts files
+    separate_tests: true   # Separate .test.ts files
+    barrel_exports: true   # Use index.ts for exports
+  
+  defaults:
+    include_props_interface: true
+    include_default_props: true
+    include_prop_types: false  # For React
+    include_error_boundary: true
+    include_loading_state: true
+    include_error_state: true
+
+# API Generation
+api:
+  structure:
+    separate_routes: true
+    separate_controllers: true
+    separate_services: true
+    separate_validators: true
+    
+  responses:
+    format: json
+    include_metadata: true
+    standard_shape:
+      success: boolean
+      data: any
+      error: object
+      pagination: object
+      
+  documentation:
+    format: openapi  # openapi | swagger | postman
+    inline_comments: true
+    example_requests: true
+    example_responses: true
+
+# Testing Generation
+testing:
+  framework: detect  # jest | mocha | vitest
+  style: bdd  # tdd | bdd
+  coverage_target: 80
+  include:
+    unit_tests: true
+    integration_tests: true
+    e2e_tests: false  # Generate separately
+    snapshot_tests: false
+    
+  assertions:
+    style: expect  # expect | assert
+    include_edge_cases: true
+    include_error_cases: true
+
+# Error Handling
+errors:
+  style: explicit  # minimal | standard | explicit
+  include_stack_trace: development_only
+  custom_error_classes: true
+  error_codes: true
+  user_friendly_messages: true
+
+# Documentation
+documentation:
+  readme_sections:
+    - installation
+    - usage
+    - api_reference
+    - examples
+    - testing
+    - contributing
+    
+  code_docs:
+    functions: always  # never | exported | always
+    classes: always
+    interfaces: always
+    complex_logic: true
+
+# Git Integration
+git:
+  commit_style: conventional  # conventional | descriptive
+  include_scope: true
+  include_breaking_changes: true
+  max_subject_length: 72
+  max_body_length: 100
+
+# AI Assistant Behavior
+ai_behavior:
+  proactiveness: moderate  # minimal | moderate | high
+  suggest_improvements: true
+  suggest_refactoring: true
+  explain_decisions: true
+  ask_clarification: true
+
+# Language-Specific Settings
+typescript:
+  strict_mode: true
+  use_interfaces: true  # vs type aliases
+  use_enums: false  # prefer const assertions
+  explicit_return_types: true
+  no_any: true
+
+react:
+  prefer_functional: true
+  use_hooks: true
+  use_custom_hooks: true
+  prop_types: false
+  default_props: true
+
+css:
+  methodology: css-in-js  # bem | css-in-js | css-modules
+  preprocessor: none  # none | sass | less | stylus
+  use_variables: true
+  use_mixins: true
+
+# Output Formatting
+output:
+  code_blocks:
+    show_language: true
+    show_filename: true
+    syntax_highlighting: true
+    
+  explanations:
+    use_bullet_points: true
+    use_numbered_lists: true
+    use_examples: true
+    use_diagrams: false  # Mermaid diagrams
+    
+  tone:
+    professional: true
+    friendly: true
+    encouraging: true
+    concise: true

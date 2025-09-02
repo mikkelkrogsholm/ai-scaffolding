@@ -1,0 +1,185 @@
+# Output Style Configuration for Writing Projects
+
+project_type: writing
+content_type: detect_from_outline  # book | article | documentation | script
+
+# Writing Style
+writing_style:
+  voice:
+    person: third  # first | second | third
+    tense: past  # past | present | future
+    formality: professional  # casual | conversational | professional | academic
+    
+  tone:
+    primary: informative  # informative | persuasive | entertaining | instructional
+    secondary: engaging  # engaging | serious | humorous | inspirational
+    consistency: strict  # strict | flexible
+    
+  language:
+    complexity: intermediate  # simple | intermediate | advanced | technical
+    reading_level: grade_10  # grade_X | general | professional | academic
+    vocabulary: accessible  # simple | accessible | sophisticated | technical
+    jargon: minimal  # none | minimal | moderate | heavy
+
+# Structure Preferences
+structure:
+  paragraphs:
+    length: medium  # short (2-3 sentences) | medium (4-5) | long (6+)
+    style: varied  # uniform | varied | progressive
+    topic_sentences: always  # always | usually | sometimes
+    
+  sentences:
+    length: varied  # short (<15 words) | medium (15-25) | long (25+) | varied
+    complexity: mixed  # simple | compound | complex | mixed
+    variety: high  # low | medium | high
+    
+  transitions:
+    style: smooth  # abrupt | smooth | formal
+    frequency: moderate  # minimal | moderate | extensive
+    type: varied  # temporal | logical | spatial | varied
+
+# Content Generation
+content:
+  detail_level: balanced  # minimal | balanced | comprehensive
+  examples:
+    frequency: regular  # rare | occasional | regular | extensive
+    style: practical  # theoretical | practical | mixed
+    relevance: high  # tangential | moderate | high
+    
+  evidence:
+    citations: informal  # none | informal | formal | academic
+    sources: credible  # popular | credible | academic | primary
+    fact_checking: strict  # loose | moderate | strict
+    
+  storytelling:
+    anecdotes: occasional  # none | rare | occasional | frequent
+    metaphors: moderate  # none | minimal | moderate | extensive
+    dialogue: contextual  # none | minimal | contextual | extensive
+
+# Chapter/Section Defaults
+chapters:
+  opening:
+    hook_style: question  # question | story | statistic | quote | statement
+    context_length: brief  # brief | moderate | extensive
+    preview: included  # none | brief | included
+    
+  development:
+    point_style: explicit  # implicit | explicit | mixed
+    evidence_placement: integrated  # frontloaded | integrated | concluded
+    example_timing: after_concept  # before | during | after_concept
+    
+  conclusion:
+    summary_style: bullet_points  # none | narrative | bullet_points
+    call_to_action: included  # none | subtle | included
+    preview_next: teaser  # none | mention | teaser
+
+# Fiction-Specific (if applicable)
+fiction:
+  dialogue:
+    tag_style: varied  # said_only | simple | varied | elaborate
+    attribution: clear  # minimal | clear | extensive
+    dialect: subtle  # none | subtle | moderate | heavy
+    
+  description:
+    detail: moderate  # sparse | moderate | rich | purple
+    pacing: varied  # fast | moderate | slow | varied
+    sensory: multi  # visual | multi | immersive
+    
+  character:
+    introduction: gradual  # immediate | gradual | mysterious
+    development: show  # tell | show | mixed
+    voice: distinct  # uniform | subtle | distinct
+
+# Non-Fiction Specific
+non_fiction:
+  argumentation:
+    style: evidence_based  # rhetorical | evidence_based | logical | emotional
+    counter_arguments: acknowledged  # ignored | acknowledged | refuted
+    bias: minimal  # heavy | moderate | minimal | neutral
+    
+  instruction:
+    step_style: numbered  # narrative | bulleted | numbered
+    prerequisites: explicit  # assumed | mentioned | explicit
+    warnings: highlighted  # inline | highlighted | separated
+    
+  research:
+    depth: thorough  # surface | moderate | thorough
+    presentation: accessible  # raw | processed | accessible
+    statistics: explained  # raw | contextualized | explained
+
+# Editing Preferences
+editing:
+  grammar:
+    style_guide: chicago  # ap | chicago | mla | apa | custom
+    oxford_comma: true
+    contractions: false  # Avoid in formal writing
+    split_infinitives: avoid
+    
+  consistency:
+    spelling: american  # american | british | canadian
+    numbers: spell_under_10  # all_digits | spell_under_10 | spell_under_100
+    dates: month_day_year  # month_day_year | day_month_year | iso
+    
+  formatting:
+    emphasis: italics  # bold | italics | underline | none
+    lists: bulleted  # numbered | bulleted | mixed
+    headings: title_case  # sentence_case | title_case | all_caps
+
+# Output Formatting
+output:
+  draft_labeling:
+    include_version: true
+    include_date: true
+    include_word_count: true
+    include_status: true  # draft | review | final
+    
+  annotations:
+    include_comments: true  # [AUTHOR NOTE: ...]
+    include_placeholders: true  # [RESEARCH NEEDED]
+    include_alternatives: false  # [OR: alternative text]
+    
+  metadata:
+    reading_time: true
+    complexity_score: true
+    key_terms: true
+    summary: true
+
+# AI Behavior for Writing
+ai_behavior:
+  creativity: moderate  # conservative | moderate | creative
+  suggestion_style: collaborative  # prescriptive | collaborative | hands_off
+  fact_checking: automatic  # none | prompted | automatic
+  style_enforcement: gentle  # none | gentle | strict
+  
+  feedback:
+    timing: after_section  # immediate | after_section | after_chapter
+    detail: balanced  # minimal | balanced | comprehensive
+    tone: encouraging  # critical | balanced | encouraging
+    
+  assistance:
+    research: proactive  # passive | prompted | proactive
+    outlining: collaborative
+    revision: suggested
+    proofreading: automatic
+
+# Genre-Specific Settings
+genres:
+  business:
+    formality: high
+    evidence: data_driven
+    structure: executive_summary_first
+    
+  academic:
+    citations: required
+    objectivity: high
+    peer_review: considered
+    
+  creative:
+    experimentation: encouraged
+    rule_breaking: allowed
+    voice: unique
+    
+  technical:
+    precision: high
+    examples: code_included
+    diagrams: frequent
