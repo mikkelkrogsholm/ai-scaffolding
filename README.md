@@ -44,6 +44,19 @@ flowchart TD
     Quality --> Deploy["🚢 Deploy"]
 ```
 
+## 📁 Where Documents Land
+
+**Important:** Scaffolded documents are created in your **current working directory**. 
+
+```bash
+# Navigate to your project first!
+cd ~/Projects/my-new-project
+/scaffold-all "MyProject" "web"
+# Creates: ./docs/, ./.claude/, ./README.md
+```
+
+See [USAGE.md](guides/USAGE.md) for detailed information about document placement and directory structures.
+
 ## 📚 Comprehensive Guide Library
 
 ### Core Documentation Guides
